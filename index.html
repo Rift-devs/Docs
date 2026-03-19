@@ -269,6 +269,11 @@
                 <a href="#cat-media" class="sidebar-link">Media</a>
                 <a href="#cat-moderation" class="sidebar-link">Moderation</a>
                 <a href="#cat-modmail" class="sidebar-link">ModMail</a>
+                <a href="#cat-bump" class="sidebar-link">Bump Reminder</a>
+                <a href="#cat-cmddisable" class="sidebar-link">Command Disable</a>
+                <a href="#cat-fortnite" class="sidebar-link">Fortnite</a>
+                <a href="#cat-music" class="sidebar-link">Music</a>
+                <a href="#cat-recording" class="sidebar-link">Recording</a>
                 <a href="#cat-poker" class="sidebar-link">Poker</a>
                 <a href="#cat-polls" class="sidebar-link">Polls</a>
                 <a href="#cat-profile" class="sidebar-link">Profile</a>
@@ -324,9 +329,9 @@
                 <div class="flex flex-wrap gap-6 mt-8 text-sm text-neutral-500">
                     <span class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
-                        <span id="total-count">508</span> commands
+                        <span id="total-count">606</span> commands
                     </span>
-                    <span>55 categories</span>
+                    <span>60 categories</span>
                     <span>Slash + Prefix support</span>
                 </div>
             </div>
@@ -510,7 +515,12 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/economy stats</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View your economy stats</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/economy work</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Work to earn some cash</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">.pray</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Pray to the RNG gods</p></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!bal</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Check your balance</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">balance</span> <span class="alias-chip">mybal</span> <span class="alias-chip">mybalance</span> <span class="alias-chip">getbal</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!daily</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Claim your daily reward</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">getdaily</span> <span class="alias-chip">dailyreward</span> <span class="alias-chip">claimdaily</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!work</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Work to earn some cash</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">grind</span> <span class="alias-chip">getwork</span> <span class="alias-chip">dowork</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!pay</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Transfer money to another user</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">sendbal</span> <span class="alias-chip">sendmoney</span> <span class="alias-chip">transfer</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!ecolb</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">View the richest users</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">econlb</span> <span class="alias-chip">ecoleaderboard</span> <span class="alias-chip">richlist</span> <span class="alias-chip">richlb</span></div></div>
+</div>
             </section>
 
             <!-- EXTRAS &AMP; TOOLS -->
@@ -568,7 +578,12 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/rp stare</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Stare at someone</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/rp tickle</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Tickle someone</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">.scdl</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Download a SoundCloud track</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">soundcloud</span> <span class="alias-chip">sc</span> <span class="alias-chip">scdownload</span></div></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!roll</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Roll a die (d6 or custom)</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">rolldice</span> <span class="alias-chip">diceroll</span> <span class="alias-chip">d6</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!choose</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Choose between multiple options</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">pick</span> <span class="alias-chip">decide</span> <span class="alias-chip">orpick</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!trivia</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Answer a random trivia question</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">quiz</span> <span class="alias-chip">triviatime</span> <span class="alias-chip">asktrivia</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!urban</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Search Urban Dictionary</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">ud</span> <span class="alias-chip">define</span> <span class="alias-chip">urbandictionary</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!8ball</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Ask the magic 8-ball a question</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">eightball</span> <span class="alias-chip">magic8</span> <span class="alias-chip">askball</span></div></div>
+</div>
             </section>
 
             <!-- GAMBLING -->
@@ -590,7 +605,15 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/game remove</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">[Owner] Remove money</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/game roulette</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Spin the wheel</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/game slots</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Spin the reels</p></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!slots</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Spin the reels</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">slotmachine</span> <span class="alias-chip">spinslots</span> <span class="alias-chip">betslots</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!cf</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Flip a coin</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">coinflip</span> <span class="alias-chip">flipcoin</span> <span class="alias-chip">coin</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!bj</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Interactive Blackjack</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">blackjack</span> <span class="alias-chip">bjack</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!dice</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Roll a dice</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">dicegame</span> <span class="alias-chip">betdice</span> <span class="alias-chip">throwdice</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!roulette</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Spin the wheel</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">roul</span> <span class="alias-chip">spinwheel</span> <span class="alias-chip">wheel</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!crash</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Multiplier rocket</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">rocket</span> <span class="alias-chip">crashgame</span> <span class="alias-chip">rocketgame</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!horserace</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Bet on a realistic horse race</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">horse</span> <span class="alias-chip">hrace</span> <span class="alias-chip">betrace</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!mine</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Go mining</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">mining</span> <span class="alias-chip">pickaxe</span> <span class="alias-chip">dig</span></div></div>
+</div>
             </section>
 
             <!-- GIVEAWAYS -->
@@ -604,7 +627,10 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/giveaway end</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">End a giveaway early</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/giveaway reroll</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Reroll a giveaway winner</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/giveaway setup</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Setup a new giveaway</p></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!gcreate</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Setup a new giveaway</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">gstart</span> <span class="alias-chip">giveawaycreate</span> <span class="alias-chip">startgiveaway</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!greroll</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Reroll a giveaway winner</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">giveawayreroll</span> <span class="alias-chip">rerollgiveaway</span> <span class="alias-chip">rerollg</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!gend</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">End a giveaway early</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">giveawayend</span> <span class="alias-chip">endgiveaway</span> <span class="alias-chip">stopgiveaway</span></div></div>
+</div>
             </section>
 
             <!-- HELP -->
@@ -781,7 +807,8 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/fm wrapped</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Your Last.fm Wrapped card for any period</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">fmwrap</span> <span class="alias-chip">fmreview</span></div></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">.fmembeds</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Toggle embed mode for your FM commands</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">fmembed</span> <span class="alias-chip">fmem</span> <span class="alias-chip">fme</span> <span class="alias-chip">fmtoggleembeds</span></div></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">.fmtimezone</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Set your timezone for date displays</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">fmtz</span> <span class="alias-chip">fmzone</span> <span class="alias-chip">fmtimez</span> <span class="alias-chip">fmsetzone</span></div></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!fmnp</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Show your current or last played track</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">fnp</span> <span class="alias-chip">nowplaying2</span> <span class="alias-chip">fmnow</span></div></div>
+</div>
             </section>
 
             <!-- LEVELING -->
@@ -801,7 +828,9 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/level rewards</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View all role rewards</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/level settings</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View all leveling settings</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/level toggle</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Enable or disable the leveling system</p></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!xprank</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Check your rank card</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">rankcard</span> <span class="alias-chip">levelrank</span> <span class="alias-chip">levelcheck</span> <span class="alias-chip">rankmain</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!lb</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">View server XP leaderboard</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">xplb</span> <span class="alias-chip">levels</span> <span class="alias-chip">toplevel</span></div></div>
+</div>
             </section>
 
             <!-- LOGGING -->
@@ -835,7 +864,10 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/marriage marry</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Propose to someone</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/marriage status</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View marriage status</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/marriage tree</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Generate a visual family tree</p></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!marry</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Propose to someone</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">propose</span> <span class="alias-chip">marryup</span> <span class="alias-chip">wed</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!divorce</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Divorce your spouse</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">breakup</span> <span class="alias-chip">divorceup</span> <span class="alias-chip">splitup</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!tree</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Generate a visual family tree</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">familytree</span> <span class="alias-chip">ftree</span> <span class="alias-chip">mytree</span></div></div>
+</div>
             </section>
 
             <!-- MEDIA -->
@@ -979,7 +1011,8 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">.warnings</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">View warnings for one or more members</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">warns</span></div></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">.warnthreshold</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Configure auto-punishment thresholds for warnings</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">wthreshold</span> <span class="alias-chip">warnpunish</span> <span class="alias-chip">wpunish</span> <span class="alias-chip">autowarn</span></div></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">.warnthresholds</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">View all configured warn thresholds</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">wthresholds</span> <span class="alias-chip">listwarnpunish</span> <span class="alias-chip">viewthresholds</span></div></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/forcenick</code><span class="text-xs px-2 py-0.5 rounded-full type-hybrid">Hybrid</span></div><p class="text-neutral-500 text-sm">Force a nickname on a user and lock it — resets if they change it</p></div>
+</div>
             </section>
 
             <!-- MODMAIL -->
@@ -1017,7 +1050,9 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/polls create</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Create a poll</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/polls setup</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Set the channel for suggestions</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/polls suggest</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Submit a suggestion for the server</p></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!poll</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Create a poll</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">createpoll</span> <span class="alias-chip">newpoll</span> <span class="alias-chip">pollcreate</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!suggest</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Submit a suggestion</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">suggestion</span> <span class="alias-chip">ideasuggest</span> <span class="alias-chip">submitidea</span></div></div>
+</div>
             </section>
 
             <!-- PROFILE -->
@@ -1171,7 +1206,9 @@
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/shop inventory</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View your inventory</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/shop remove_item</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">[Admin] Remove a server item from the shop.</p></div>
                     <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/shop view</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Browse the shop catalog.</p></div>
-                </div>
+                <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!browse</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">Browse the shop catalog</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">shopbrowse</span> <span class="alias-chip">shoplist</span> <span class="alias-chip">viewshop</span></div></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">!inventory</code><span class="text-xs px-2 py-0.5 rounded-full type-prefix">Prefix</span></div><p class="text-neutral-500 text-sm">View your inventory</p><div class="flex flex-wrap gap-1 mt-2"><span class="alias-chip">myinv</span> <span class="alias-chip">myinventory</span> <span class="alias-chip">invcheck</span></div></div>
+</div>
             </section>
 
             <!-- SOCIALS -->
@@ -1444,6 +1481,124 @@
                 </div>
             </section>
 
+            <!-- RECORDING -->
+            <section id="cat-recording" class="section-glow pt-4">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl">🎙️</span>
+                    <h2 class="font-display font-semibold text-2xl">Recording</h2>
+                    <span class="count-badge">8</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/record start</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Start a recording session (needs all user(s) permission)</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/record stop</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Stop the active recording session</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/record status</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Check the status of the current recording</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/record list</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">List saved recordings for this server</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/record download</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Send a saved recording file</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/record info</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Show recording storage stats for this server</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/record transcript</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Transcribe a saved recording or an uploaded WAV file</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/record purge</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Delete all saved recordings for this server</p></div>
+
+                </div>
+            </section>
+            <!-- MUSIC -->
+            <section id="cat-music" class="section-glow pt-4">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl">🎵</span>
+                    <h2 class="font-display font-semibold text-2xl">Music</h2>
+                    <span class="count-badge">41</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music play</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Play a song from YouTube, Spotify, SoundCloud, and more.</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music skip</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Skip the current song</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music pause</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Pause the current song</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music resume</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Resume the paused song</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music stop</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Stop playback and clear the queue</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music queue</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Show the current queue with interactive controls</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music nowplaying</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Show the currently playing song</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music volume</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Set the player volume</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music loop</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Toggle loop mode</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music shuffle</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Shuffle the queue</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music clear</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Clear the queue</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music seek</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Seek to a specific time in the current song</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music lyrics</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Get lyrics for the current song</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music radio</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Start radio mode based on an artist or play a radio station</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music history</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Show recently played songs with metadata</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music speak</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Make the bot say something in VC (TTS)</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music settings</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Personalise your music experience</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music filter</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Apply audio filter to the player</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music dj</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Toggle DJ mode (only DJ can control music)</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music move</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Move a track to a different position in the queue</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music voteskip</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Vote to skip the current song</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music upload</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Upload and play an audio file</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music equalizer</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Open the interactive EQ — 12 presets, image visualiser, custom bands</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music fix</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Troubleshoot audio/connection issues with interactive tools</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/music controller</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Set up or manage the persistent music controller channel</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist create</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Create a new playlist</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist delete</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Delete one of your playlists</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist list</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">List your playlists or view public playlists</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist show</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Show tracks in a playlist</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist add</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Add current song or search result to playlist</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist remove</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Remove a track from playlist</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist play</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Play an entire playlist</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist rename</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Rename one of your playlists</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist clone</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Duplicate a playlist</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist share</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Change playlist visibility (public/private)</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist import</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Import playlist from URL into a new or existing playlist</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist collab</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Manage playlist collaborators (editors)</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist merge</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Merge another playlist into one of yours</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist sort</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Sort a playlist's tracks</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist export</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Export a playlist as a text list</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/playlist permissions</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View playlist permissions and collaborators</p></div>
+
+                </div>
+            </section>
+            <!-- FORTNITE -->
+            <section id="cat-fortnite" class="section-glow pt-4">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl">🏗️</span>
+                    <h2 class="font-display font-semibold text-2xl">Fortnite</h2>
+                    <span class="count-badge">6</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/fortnite link</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Link your Epic Games account</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/fortnite unlink</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Unlink your Fortnite account from this server</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/fortnite stats</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View Fortnite Battle Royale stats</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/fortnite leaderboard</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Server Fortnite leaderboard</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/fortnite compare</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Head-to-head Fortnite stat comparison</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/fortnite track</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Set a channel for daily Fortnite stat updates</p></div>
+
+                </div>
+            </section>
+            <!-- BUMP REMINDER -->
+            <section id="cat-bump" class="section-glow pt-4">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl">🔔</span>
+                    <h2 class="font-display font-semibold text-2xl">Bump Reminder</h2>
+                    <span class="count-badge">4</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/bumpreminder setup</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Set up bump reminders for this server</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/bumpreminder disable</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Disable bump reminders for this server</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/bumpreminder status</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View the current bump reminder configuration</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/bumpreminder reset</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Reset the bump timer (for testing or after outage)</p></div>
+
+                </div>
+            </section>
+            <!-- COMMAND DISABLE -->
+            <section id="cat-cmddisable" class="section-glow pt-4">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl">🚫</span>
+                    <h2 class="font-display font-semibold text-2xl">Command Disable</h2>
+                    <span class="count-badge">4</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/commands disable</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Disable a bot command in this server</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/commands enable</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Re-enable a previously disabled command</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/commands list</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">View all disabled commands for this server</p></div>
+<div class="cmd-card p-4"><div class="flex items-center justify-between mb-1"><code class="text-white font-medium">/commands reset</code><span class="text-xs px-2 py-0.5 rounded-full type-slash">Slash</span></div><p class="text-neutral-500 text-sm">Re-enable ALL disabled commands at once</p></div>
+
+                </div>
+            </section>
         </main>
     </div>
 
@@ -1464,7 +1619,7 @@
 
         // ─── Animated counter on load ─────────────────────────
         const totalEl = document.getElementById('total-count');
-        const target = 508;
+        const target = 606;
         let current = 0;
         const step = Math.ceil(target / 60);
         const timer = setInterval(() => {
