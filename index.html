@@ -34,16 +34,7 @@
         .gradient-bg {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: -2;
-            background: linear-gradient(-45deg, #000000, #0a0a0a, #111111, #000000, #080808, #000000);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-        @keyframes gradientShift {
-            0%   { background-position: 0% 50%;   }
-            25%  { background-position: 50% 100%; }
-            50%  { background-position: 100% 50%; }
-            75%  { background-position: 50% 0%;   }
-            100% { background-position: 0% 50%;   }
+            background: #000000;
         }
 
         .orb { position: fixed; border-radius: 50%; opacity: 0.12; z-index: -1; pointer-events: none; }
@@ -51,23 +42,11 @@
             width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 60%);
             top: -200px; right: -200px;
-            animation: floatOrb1 20s ease-in-out infinite;
         }
         .orb-2 {
             width: 500px; height: 500px;
             background: radial-gradient(circle, rgba(204,204,204,0.8) 0%, rgba(204,204,204,0) 60%);
             bottom: 30%; left: -150px;
-            animation: floatOrb2 25s ease-in-out infinite;
-        }
-        @keyframes floatOrb1 {
-            0%,100% { transform: translate3d(0,0,0) scale(1); }
-            33%      { transform: translate3d(-50px,30px,0) scale(1.1); }
-            66%      { transform: translate3d(30px,-20px,0) scale(0.9); }
-        }
-        @keyframes floatOrb2 {
-            0%,100% { transform: translate3d(0,0,0) scale(1); }
-            33%      { transform: translate3d(40px,-40px,0) scale(1.2); }
-            66%      { transform: translate3d(-30px,20px,0) scale(0.8); }
         }
 
         .grid-pattern {
@@ -182,6 +161,8 @@
         /* ─── Hidden when filtering ───────────────────── */
         .cmd-hidden { display: none !important; }
         .section-hidden { display: none !important; }
+        .section-lazy { opacity: 0; transform: translateY(12px); transition: opacity 0.3s ease, transform 0.3s ease; }
+        .section-lazy.visible { opacity: 1; transform: translateY(0); }
 
         /* ─── Btn glow ────────────────────────────────── */
         .btn-glow { position: relative; overflow: hidden; }
@@ -337,7 +318,7 @@
             </div>
 
             <!-- AFK -->
-            <section id="cat-afk" class="section-glow pt-4">
+            <section id="cat-afk" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">💤</span>
                     <h2 class="font-display font-semibold text-2xl">AFK</h2>
@@ -349,7 +330,7 @@
             </section>
 
             <!-- AI &AMP; ROLEPLAY -->
-            <section id="cat-ai" class="section-glow pt-4">
+            <section id="cat-ai" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🤖</span>
                     <h2 class="font-display font-semibold text-2xl">AI &amp; Roleplay</h2>
@@ -377,7 +358,7 @@
             </section>
 
             <!-- APPLICATIONS -->
-            <section id="cat-applications" class="section-glow pt-4">
+            <section id="cat-applications" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📋</span>
                     <h2 class="font-display font-semibold text-2xl">Applications</h2>
@@ -394,7 +375,7 @@
             </section>
 
             <!-- AUTOMOD -->
-            <section id="cat-automod" class="section-glow pt-4">
+            <section id="cat-automod" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🛡️</span>
                     <h2 class="font-display font-semibold text-2xl">AutoMod</h2>
@@ -421,7 +402,7 @@
             </section>
 
             <!-- AUTO RESPONDER -->
-            <section id="cat-autoresponder" class="section-glow pt-4">
+            <section id="cat-autoresponder" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">💬</span>
                     <h2 class="font-display font-semibold text-2xl">Auto Responder</h2>
@@ -439,7 +420,7 @@
             </section>
 
             <!-- BIRTHDAYS -->
-            <section id="cat-birthdays" class="section-glow pt-4">
+            <section id="cat-birthdays" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎂</span>
                     <h2 class="font-display font-semibold text-2xl">Birthdays</h2>
@@ -454,7 +435,7 @@
             </section>
 
             <!-- BOOSTER ROLES -->
-            <section id="cat-boosterrole" class="section-glow pt-4">
+            <section id="cat-boosterrole" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">💎</span>
                     <h2 class="font-display font-semibold text-2xl">Booster Roles</h2>
@@ -474,7 +455,7 @@
             </section>
 
             <!-- CONFESSIONS -->
-            <section id="cat-confessions" class="section-glow pt-4">
+            <section id="cat-confessions" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🤫</span>
                     <h2 class="font-display font-semibold text-2xl">Confessions</h2>
@@ -487,7 +468,7 @@
             </section>
 
             <!-- COUNTING -->
-            <section id="cat-counting" class="section-glow pt-4">
+            <section id="cat-counting" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🔢</span>
                     <h2 class="font-display font-semibold text-2xl">Counting</h2>
@@ -501,7 +482,7 @@
             </section>
 
             <!-- ECONOMY -->
-            <section id="cat-economy" class="section-glow pt-4">
+            <section id="cat-economy" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">💰</span>
                     <h2 class="font-display font-semibold text-2xl">Economy</h2>
@@ -524,7 +505,7 @@
             </section>
 
             <!-- EXTRAS &AMP; TOOLS -->
-            <section id="cat-extras" class="section-glow pt-4">
+            <section id="cat-extras" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🔧</span>
                     <h2 class="font-display font-semibold text-2xl">Extras &amp; Tools</h2>
@@ -549,7 +530,7 @@
             </section>
 
             <!-- FUN -->
-            <section id="cat-fun" class="section-glow pt-4">
+            <section id="cat-fun" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎉</span>
                     <h2 class="font-display font-semibold text-2xl">Fun</h2>
@@ -587,7 +568,7 @@
             </section>
 
             <!-- GAMBLING -->
-            <section id="cat-gambling" class="section-glow pt-4">
+            <section id="cat-gambling" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎰</span>
                     <h2 class="font-display font-semibold text-2xl">Gambling</h2>
@@ -617,7 +598,7 @@
             </section>
 
             <!-- GIVEAWAYS -->
-            <section id="cat-giveaways" class="section-glow pt-4">
+            <section id="cat-giveaways" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎁</span>
                     <h2 class="font-display font-semibold text-2xl">Giveaways</h2>
@@ -634,7 +615,7 @@
             </section>
 
             <!-- HELP -->
-            <section id="cat-help" class="section-glow pt-4">
+            <section id="cat-help" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">❓</span>
                     <h2 class="font-display font-semibold text-2xl">Help</h2>
@@ -646,7 +627,7 @@
             </section>
 
             <!-- HIGHLIGHTS -->
-            <section id="cat-highlight" class="section-glow pt-4">
+            <section id="cat-highlight" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🔔</span>
                     <h2 class="font-display font-semibold text-2xl">Highlights</h2>
@@ -663,7 +644,7 @@
             </section>
 
             <!-- IMAGE GEN -->
-            <section id="cat-imgen" class="section-glow pt-4">
+            <section id="cat-imgen" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🖼️</span>
                     <h2 class="font-display font-semibold text-2xl">Image Gen</h2>
@@ -678,7 +659,7 @@
             </section>
 
             <!-- INSTAGRAM -->
-            <section id="cat-instagram" class="section-glow pt-4">
+            <section id="cat-instagram" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📸</span>
                     <h2 class="font-display font-semibold text-2xl">Instagram</h2>
@@ -690,7 +671,7 @@
             </section>
 
             <!-- INVITES -->
-            <section id="cat-invites" class="section-glow pt-4">
+            <section id="cat-invites" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📨</span>
                     <h2 class="font-display font-semibold text-2xl">Invites</h2>
@@ -715,7 +696,7 @@
             </section>
 
             <!-- LAST.FM -->
-            <section id="cat-lastfm" class="section-glow pt-4">
+            <section id="cat-lastfm" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎵</span>
                     <h2 class="font-display font-semibold text-2xl">Last.fm</h2>
@@ -812,7 +793,7 @@
             </section>
 
             <!-- LEVELING -->
-            <section id="cat-leveling" class="section-glow pt-4">
+            <section id="cat-leveling" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">⬆️</span>
                     <h2 class="font-display font-semibold text-2xl">Leveling</h2>
@@ -834,7 +815,7 @@
             </section>
 
             <!-- LOGGING -->
-            <section id="cat-logging" class="section-glow pt-4">
+            <section id="cat-logging" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📝</span>
                     <h2 class="font-display font-semibold text-2xl">Logging</h2>
@@ -850,7 +831,7 @@
             </section>
 
             <!-- MARRIAGE -->
-            <section id="cat-marriage" class="section-glow pt-4">
+            <section id="cat-marriage" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">💍</span>
                     <h2 class="font-display font-semibold text-2xl">Marriage</h2>
@@ -871,7 +852,7 @@
             </section>
 
             <!-- MEDIA -->
-            <section id="cat-media" class="section-glow pt-4">
+            <section id="cat-media" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📺</span>
                     <h2 class="font-display font-semibold text-2xl">Media</h2>
@@ -883,7 +864,7 @@
             </section>
 
             <!-- MODERATION -->
-            <section id="cat-moderation" class="section-glow pt-4">
+            <section id="cat-moderation" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">⚔️</span>
                     <h2 class="font-display font-semibold text-2xl">Moderation</h2>
@@ -1016,7 +997,7 @@
             </section>
 
             <!-- MODMAIL -->
-            <section id="cat-modmail" class="section-glow pt-4">
+            <section id="cat-modmail" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📬</span>
                     <h2 class="font-display font-semibold text-2xl">ModMail</h2>
@@ -1028,7 +1009,7 @@
             </section>
 
             <!-- POKER -->
-            <section id="cat-poker" class="section-glow pt-4">
+            <section id="cat-poker" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🃏</span>
                     <h2 class="font-display font-semibold text-2xl">Poker</h2>
@@ -1040,7 +1021,7 @@
             </section>
 
             <!-- POLLS -->
-            <section id="cat-polls" class="section-glow pt-4">
+            <section id="cat-polls" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📊</span>
                     <h2 class="font-display font-semibold text-2xl">Polls</h2>
@@ -1056,7 +1037,7 @@
             </section>
 
             <!-- PROFILE -->
-            <section id="cat-profile" class="section-glow pt-4">
+            <section id="cat-profile" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">👤</span>
                     <h2 class="font-display font-semibold text-2xl">Profile</h2>
@@ -1068,7 +1049,7 @@
             </section>
 
             <!-- RAINBOW SIX -->
-            <section id="cat-r6" class="section-glow pt-4">
+            <section id="cat-r6" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎯</span>
                     <h2 class="font-display font-semibold text-2xl">Rainbow Six</h2>
@@ -1081,7 +1062,7 @@
             </section>
 
             <!-- REACTION TRIGGERS -->
-            <section id="cat-reaction" class="section-glow pt-4">
+            <section id="cat-reaction" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">⚡</span>
                     <h2 class="font-display font-semibold text-2xl">Reaction Triggers</h2>
@@ -1097,7 +1078,7 @@
             </section>
 
             <!-- REACTION ROLES -->
-            <section id="cat-reaction-roles" class="section-glow pt-4">
+            <section id="cat-reaction-roles" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🏷️</span>
                     <h2 class="font-display font-semibold text-2xl">Reaction Roles</h2>
@@ -1109,7 +1090,7 @@
             </section>
 
             <!-- REMINDERS -->
-            <section id="cat-reminders" class="section-glow pt-4">
+            <section id="cat-reminders" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">⏰</span>
                     <h2 class="font-display font-semibold text-2xl">Reminders</h2>
@@ -1124,7 +1105,7 @@
             </section>
 
             <!-- REPORTS -->
-            <section id="cat-reports" class="section-glow pt-4">
+            <section id="cat-reports" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🚩</span>
                     <h2 class="font-display font-semibold text-2xl">Reports</h2>
@@ -1142,7 +1123,7 @@
             </section>
 
             <!-- SAY -->
-            <section id="cat-say" class="section-glow pt-4">
+            <section id="cat-say" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🗣️</span>
                     <h2 class="font-display font-semibold text-2xl">Say</h2>
@@ -1154,7 +1135,7 @@
             </section>
 
             <!-- SERVER STATS -->
-            <section id="cat-serverstats" class="section-glow pt-4">
+            <section id="cat-serverstats" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📈</span>
                     <h2 class="font-display font-semibold text-2xl">Server Stats</h2>
@@ -1169,7 +1150,7 @@
             </section>
 
             <!-- SETTINGS -->
-            <section id="cat-settings" class="section-glow pt-4">
+            <section id="cat-settings" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">⚙️</span>
                     <h2 class="font-display font-semibold text-2xl">Settings</h2>
@@ -1181,7 +1162,7 @@
             </section>
 
             <!-- SHIPPING -->
-            <section id="cat-shipping" class="section-glow pt-4">
+            <section id="cat-shipping" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">❤️</span>
                     <h2 class="font-display font-semibold text-2xl">Shipping</h2>
@@ -1193,7 +1174,7 @@
             </section>
 
             <!-- SHOP -->
-            <section id="cat-shop" class="section-glow pt-4">
+            <section id="cat-shop" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🛒</span>
                     <h2 class="font-display font-semibold text-2xl">Shop</h2>
@@ -1212,7 +1193,7 @@
             </section>
 
             <!-- SOCIALS -->
-            <section id="cat-socials" class="section-glow pt-4">
+            <section id="cat-socials" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📡</span>
                     <h2 class="font-display font-semibold text-2xl">Socials</h2>
@@ -1228,7 +1209,7 @@
             </section>
 
             <!-- SOUNDBOARD -->
-            <section id="cat-soundboard" class="section-glow pt-4">
+            <section id="cat-soundboard" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🔊</span>
                     <h2 class="font-display font-semibold text-2xl">Soundboard</h2>
@@ -1241,7 +1222,7 @@
             </section>
 
             <!-- STARBOARD -->
-            <section id="cat-starboard" class="section-glow pt-4">
+            <section id="cat-starboard" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">⭐</span>
                     <h2 class="font-display font-semibold text-2xl">Starboard</h2>
@@ -1253,7 +1234,7 @@
             </section>
 
             <!-- STICKY -->
-            <section id="cat-sticky" class="section-glow pt-4">
+            <section id="cat-sticky" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📌</span>
                     <h2 class="font-display font-semibold text-2xl">Sticky</h2>
@@ -1268,7 +1249,7 @@
             </section>
 
             <!-- STOCKS -->
-            <section id="cat-stocks" class="section-glow pt-4">
+            <section id="cat-stocks" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">📉</span>
                     <h2 class="font-display font-semibold text-2xl">Stocks</h2>
@@ -1288,7 +1269,7 @@
             </section>
 
             <!-- SYSTEM -->
-            <section id="cat-system" class="section-glow pt-4">
+            <section id="cat-system" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🖥️</span>
                     <h2 class="font-display font-semibold text-2xl">System</h2>
@@ -1302,7 +1283,7 @@
             </section>
 
             <!-- TAGS &AMP; TRIGGERS -->
-            <section id="cat-tags" class="section-glow pt-4">
+            <section id="cat-tags" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🏷️</span>
                     <h2 class="font-display font-semibold text-2xl">Tags &amp; Triggers</h2>
@@ -1321,7 +1302,7 @@
             </section>
 
             <!-- TICKETS -->
-            <section id="cat-tickets" class="section-glow pt-4">
+            <section id="cat-tickets" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎫</span>
                     <h2 class="font-display font-semibold text-2xl">Tickets</h2>
@@ -1338,7 +1319,7 @@
             </section>
 
             <!-- UTILITY -->
-            <section id="cat-utility" class="section-glow pt-4">
+            <section id="cat-utility" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🔨</span>
                     <h2 class="font-display font-semibold text-2xl">Utility</h2>
@@ -1383,7 +1364,7 @@
             </section>
 
             <!-- VERIFICATION -->
-            <section id="cat-verification" class="section-glow pt-4">
+            <section id="cat-verification" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">✅</span>
                     <h2 class="font-display font-semibold text-2xl">Verification</h2>
@@ -1395,7 +1376,7 @@
             </section>
 
             <!-- VOICE XP -->
-            <section id="cat-voicexp" class="section-glow pt-4">
+            <section id="cat-voicexp" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎤</span>
                     <h2 class="font-display font-semibold text-2xl">Voice XP</h2>
@@ -1415,7 +1396,7 @@
             </section>
 
             <!-- VOICEMASTER -->
-            <section id="cat-voicemaster" class="section-glow pt-4">
+            <section id="cat-voicemaster" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎙️</span>
                     <h2 class="font-display font-semibold text-2xl">VoiceMaster</h2>
@@ -1427,7 +1408,7 @@
             </section>
 
             <!-- VOTE -->
-            <section id="cat-vote" class="section-glow pt-4">
+            <section id="cat-vote" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🗳️</span>
                     <h2 class="font-display font-semibold text-2xl">Vote</h2>
@@ -1439,7 +1420,7 @@
             </section>
 
             <!-- WELCOME -->
-            <section id="cat-welcome" class="section-glow pt-4">
+            <section id="cat-welcome" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">👋</span>
                     <h2 class="font-display font-semibold text-2xl">Welcome</h2>
@@ -1456,7 +1437,7 @@
             </section>
 
             <!-- SERVER WIZARD -->
-            <section id="cat-wizard" class="section-glow pt-4">
+            <section id="cat-wizard" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🧙</span>
                     <h2 class="font-display font-semibold text-2xl">Server Wizard</h2>
@@ -1468,7 +1449,7 @@
             </section>
 
             <!-- GLOBAL &AMP; USERPHONE -->
-            <section id="cat-yggdrasil" class="section-glow pt-4">
+            <section id="cat-yggdrasil" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">☎️</span>
                     <h2 class="font-display font-semibold text-2xl">Global &amp; UserPhone</h2>
@@ -1482,7 +1463,7 @@
             </section>
 
             <!-- RECORDING -->
-            <section id="cat-recording" class="section-glow pt-4">
+            <section id="cat-recording" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎙️</span>
                     <h2 class="font-display font-semibold text-2xl">Recording</h2>
@@ -1501,7 +1482,7 @@
                 </div>
             </section>
             <!-- MUSIC -->
-            <section id="cat-music" class="section-glow pt-4">
+            <section id="cat-music" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🎵</span>
                     <h2 class="font-display font-semibold text-2xl">Music</h2>
@@ -1553,7 +1534,7 @@
                 </div>
             </section>
             <!-- FORTNITE -->
-            <section id="cat-fortnite" class="section-glow pt-4">
+            <section id="cat-fortnite" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🏗️</span>
                     <h2 class="font-display font-semibold text-2xl">Fortnite</h2>
@@ -1570,7 +1551,7 @@
                 </div>
             </section>
             <!-- BUMP REMINDER -->
-            <section id="cat-bump" class="section-glow pt-4">
+            <section id="cat-bump" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🔔</span>
                     <h2 class="font-display font-semibold text-2xl">Bump Reminder</h2>
@@ -1585,7 +1566,7 @@
                 </div>
             </section>
             <!-- COMMAND DISABLE -->
-            <section id="cat-cmddisable" class="section-glow pt-4">
+            <section id="cat-cmddisable" class="section-glow pt-4 section-lazy">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-2xl">🚫</span>
                     <h2 class="font-display font-semibold text-2xl">Command Disable</h2>
@@ -1615,6 +1596,18 @@
     </footer>
 
     <script>
+
+        // ─── Lazy section reveal ──────────────────────────────
+        const lazyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    lazyObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.section-lazy').forEach(s => lazyObserver.observe(s));
+
         document.getElementById('footer-year').textContent = `© ${new Date().getFullYear()} Rift`;
 
         // ─── Animated counter on load ─────────────────────────
