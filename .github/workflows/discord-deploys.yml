@@ -1,18 +1,40 @@
-name: Discord Deploy Notification
+name: Discord Pages Status Notification
 
 on:
-  push:
-    branches:
-      - main
+workflow_run:
+workflows: ["pages-build-deployment"]
+types:
+- completed
 
 jobs:
-  notify:
-    runs-on: ubuntu-latest
+notify:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Send Discord Webhook
-        run: |
-          curl -H "Content-Type: application/json" \
-          -X POST \
-          -d '{"content":"✅ Has been deployed"}' \
-          "${{ secrets.DISCORD_WEBHOOK }}"
+```
+steps:
+  - name: Success message
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    run: |
+      curl -H "Content-Type: application/json" \
+      -X POST \
+      -d '{"content":"✅ Pages deployed successfully"}' \
+      "${{ secrets.DISCORD_WEBHOOK }}"
+
+  - name: Failure message
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    run: |
+      curl -H "Content-Type: application/json" \
+      -X POST \
+      -d '{
+        "content": "❌ Pages deployment FAILED\nRepo: ${{ github.repository }}\nBranch: ${{ github.event.workflow_run.head_branch }}\nCommit: ${{ github.event.workflow_run.head_commit.message }}\nView logs: ${{ github.event.workflow_run.html_url }}"
+      }' \
+      "${{ secrets.DISCORD_WEBHOOK }}"
+
+  - name: Cancelled message
+    if: ${{ github.event.workflow_run.conclusion == 'cancelled' }}
+    run: |
+      curl -H "Content-Type: application/json" \
+      -X POST \
+      -d '{"content":"⚠️ Pages deployment was cancelled"}' \
+      "${{ secrets.DISCORD_WEBHOOK }}"
+```
