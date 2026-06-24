@@ -1,6 +1,0 @@
-- name: Send Discord Webhook
-  run: |
-    curl -H "Content-Type: application/json" \
-    -X POST \
-    -d '{"content":"✅ ${{ github.repository }} has been deployed"}' \
-    "${{ secrets.DISCORD_WEBHOOK }}"

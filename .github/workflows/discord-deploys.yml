@@ -1,0 +1,18 @@
+name: Discord Deploy Notification
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Discord Webhook
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{"content":"✅ Has been deployed"}' \
+          "${{ secrets.DISCORD_WEBHOOK }}"
